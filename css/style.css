@@ -1,0 +1,127 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body{
+height: 100%;
+}
+
+.logo{
+  border-radius: 50%;
+  width: 10%;
+}
+.header{
+  background-color: black;
+  padding: 1em;
+}
+.container-logo{
+  text-align: center;
+}
+
+
+.card {
+  border-radius: 20px;
+  padding: 15px 20px;
+  font-size: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1)!important;
+  border: none;
+  cursor: pointer;
+  transition:all 0.2s;
+}
+
+
+.card:hover {
+  background-color: #edd269;
+  border: 2px solid black;
+  transition:all 0.2s;
+}
+
+.cardapio {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+
+.container-menu {
+  margin-bottom: 40px;
+}
+
+.card-item {
+  height: 360px;
+}
+
+.card-item .img-produto img {
+  width: 100%;
+  border-radius: 11px;
+}
+
+.card-item .title-produto {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 40px;
+  margin-bottom: 0px;
+}
+
+
+.card-item .price-produto {
+  font-size: 24px;
+}
+
+
+.button{
+  padding: 1em;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid gray;
+  margin: 0 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.active{
+  background-color: #edd269;
+  border: 2px solid black;
+}
+
+.button-more{
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 1em;
+  border-radius: 20px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  margin-top: 3em;
+}
+
+
+
+.hidden {
+  display: none!important;
+}
+
+
+/* @media screen and (min-width: 56rem) {
+  .card:hover{
+    background-color: ffbf00;
+    transform: scale(1.03);
+    border: 2px solid black;
+    transition:all 0.2s;
+  }
+} */
+
+@media screen and (max-width: 767px) {
+  .button{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap !important;
+  }
+}
