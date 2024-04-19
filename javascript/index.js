@@ -33,6 +33,7 @@ cardapio.metodos = {
           .replace(/\${nome}/g, e.name)
           .replace(/\${preco}/g, e.price.toFixed(2).replace('.', ','))
           .replace(/\${id}/g, e.id)
+          .replace(/\${accordion}/g, e.accordion)
 
           // botão ver mais foi clicado (12 itens)
           if (vermais && i >= 8 && i < 12) {
@@ -70,17 +71,27 @@ cardapio.templates = {
 
   item: `
       <div class="col-12 col-lg-3 col-md-3 col-sm-6 mb-5">
-          <div class="card card-item" id="\${id}">
-              <div class="img-produto">
-                  <img src="\${img}" />
-              </div>
-              <p class="title-produto text-center mt-4">
-                  <b>\${nome}</b>
-              </p>
-              <p class="price-produto text-center">
-                  <b>R$ \${preco}</b>
-              </p>
-          </div>
+            <div class="accordion" id="accordion\${accordion}">
+                <div class="accordion-item">
+                    <div class="card card-item accordion-button" id="\${id}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse\${accordion}" aria-expanded="false" aria-controls="collapse\${accordion}">
+                        <div class="img-produto">
+                            <img src="\${img}" />
+                        </div>
+                        <p class="title-produto text-center mt-4">
+                            <b>\${nome}</b>
+                        </p>
+                        <p class="price-produto text-center">
+                            <b>R$ \${preco}</b>
+                        </p>
+                    </div>
+
+                    <div id="collapse\${accordion}" class="accordion-collapse collapse " data-bs-parent="#accordion\${accordion}">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong>
+                    </div>
+                    </div>
+                </div>
+            </div>
       </div>
   `,
 

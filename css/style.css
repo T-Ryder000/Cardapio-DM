@@ -35,12 +35,6 @@ height: 100%;
 }
 
 
-.card:hover {
-  background-color: #edd269;
-  border: 2px solid black;
-  transition:all 0.2s;
-}
-
 .cardapio {
   padding-top: 50px;
   padding-bottom: 150px;
@@ -107,6 +101,36 @@ height: 100%;
   display: none!important;
 }
 
+
+.accordion,.accordion-item, .accordion-header, .accordion-button{
+
+  border-radius: none !important;
+  color: black !important;
+  font-weight: bold;
+
+  /* background-color: white !important; */
+  transition:all 0.2s;
+}
+
+.accordion-button{
+  background-color: white !important; 
+}
+
+.accordion-button:active{
+  background-color: #edd269 !important;
+  border: 2px solid black !important;
+  transition:all 0.2s;
+}
+
+
+.accordion-body{
+  background-color: black !important;
+  color: white !important;
+  border-radius: 0px 0 20px 20px !important;
+}
+
+
+/* .accordion-item */
 
 /* @media screen and (min-width: 56rem) {
   .card:hover{
