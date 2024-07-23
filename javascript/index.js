@@ -33,6 +33,7 @@ cardapio.metodos = {
           .replace(/\${nome}/g, e.name)
           .replace(/\${preco}/g, e.price.toFixed(2).replace('.', ','))
           .replace(/\${id}/g, e.id)
+          .replace(/\${dsc}/g, e.dsc)
           .replace(/\${accordion}/g, e.accordion)
 
           // botão ver mais foi clicado (12 itens)
@@ -87,7 +88,7 @@ cardapio.templates = {
 
                     <div id="collapse\${accordion}" class="accordion-collapse collapse " data-bs-parent="#accordion\${accordion}">
                     <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong>
+                        <strong>\${dsc}</strong>
                     </div>
                     </div>
                 </div>

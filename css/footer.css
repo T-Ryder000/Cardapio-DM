@@ -1,0 +1,29 @@
+.footer{
+  background-color: black;
+  padding: 1em 0 0.5em;
+  color: white;
+  height: auto;
+}
+
+.footer__redes-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.footer__texto{
+  text-align: center;
+}
+
+.footer__link{
+  text-decoration: none !important;
+  color: white !important;
+ }
+
+ @media screen and (max-width: 600px) {
+  .footer__redes-wrapper{
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+  }
+ }
